@@ -1,0 +1,12 @@
+; $Id$
+name = Semantic Views
+description = Views 3 plugins for UI management of output markup
+core = 7.x
+dependencies[] = views
+package = Views
+files[] = semanticviews.module
+files[] = semanticviews_plugin_row_fields.inc
+files[] = semanticviews_plugin_style_default.inc
+files[] = semanticviews.theme.inc
+files[] = semanticviews.views_default.inc
+files[] = semanticviews.views.inc

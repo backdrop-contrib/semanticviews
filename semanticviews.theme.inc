@@ -1,5 +1,4 @@
 <?php
-// $Id$
 /**
  * @file semanticviews.theme.inc
  * TODO: Enter file description here.

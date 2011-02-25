@@ -1,5 +1,4 @@
 <?php
-// $Id$
 /**
  * @file semanticviews-view-fields.tpl.php
  * Default simple view template to display all the fields as a row. The template

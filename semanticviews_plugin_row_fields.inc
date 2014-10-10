@@ -43,7 +43,7 @@ class semanticviews_plugin_row_fields extends views_plugin_row {
           '#title' => $handler->label() ? $handler->label() : $handler->ui_name(),
           '#type' => 'fieldset',
           '#attributes' => array(
-            'class' => 'clear-block',
+            'class' => array('clearfix'),
           ),
         );
         $form['semantic_html'][$field]['element_type'] = array(

@@ -66,7 +66,7 @@ class semanticviews_plugin_style_default extends views_plugin_style {
       '#title' => t('Grouping title'),
       '#description' => t('If using groups, the view will insert the grouping&rsquo;s title field.'),
       '#attributes' => array(
-        'class' => 'clear-block',
+        'class' => array('clearfix'),
       ),
     );
     $form['group']['element_type'] = array(
@@ -92,7 +92,7 @@ class semanticviews_plugin_style_default extends views_plugin_style {
       '#title' => t('List'),
       '#description' => t('If the output should be a HTML list, select the element and class attribute. The row element should also be set to %li.', array('%li' => 'li')),
       '#attributes' => array(
-        'class' => 'clear-block',
+        'class' => array('clearfix'),
       ),
     );
     $form['list']['element_type'] = array(
@@ -122,11 +122,11 @@ class semanticviews_plugin_style_default extends views_plugin_style {
       '#type' => 'fieldset',
       '#title' => t('Row'),
       '#attributes' => array(
-        'class' => 'clear-block',
+        'class' => array('clearfix'),
       ),
     );
     $form['row']['element_type'] = array(
-      '#prefix' => '<div class="clear-block"><div class="views-left-30">',
+      '#prefix' => '<div class="clearfix"><div class="views-left-30">',
       '#suffix' => '</div>',
       '#title' => t('Element'),
       '#type' => 'textfield',
@@ -157,7 +157,7 @@ class semanticviews_plugin_style_default extends views_plugin_style {
         )
       ),
       '#attributes' => array(
-        'class' => 'clear-block',
+        'class' => array('clearfix'),
       ),
     );
     $form['row']['first_last']['last_every_nth'] = array(

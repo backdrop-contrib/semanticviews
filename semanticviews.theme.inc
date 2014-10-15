@@ -88,6 +88,10 @@ function template_preprocess_semanticviews_view_unformatted(&$vars) {
   // Get alias tokens.
   $tokens = semanticviews_get_alias_tokens($view);
 
+  // When grouping fields row index doesn't reset in each group so we have to do it manually,
+  // otherwise "last_every_nth" may work incorrect.
+  $index_in_group = 0;
+
   foreach ($vars['rows'] as $id => $row) {
     // Get token replacements.
     $replacements = semanticviews_get_token_replacements($view->result[$id], $tokens);
@@ -104,10 +108,10 @@ function template_preprocess_semanticviews_view_unformatted(&$vars) {
       // nth" option is specified, the FIRST attribute is added to the class in
       // those intervals. This could be useful for grid designs where the first
       // unit in a row needs a zero width margin.
-      if (($last_every_nth && $id % $last_every_nth == 0) ||
+      if (($last_every_nth && $index_in_group % $last_every_nth == 0) ||
          // Otherwise when last every nth is not set, the FIRST class is added
          // to the first row in the pager set.
-         (!$last_every_nth && $id == 0)) {
+         (!$last_every_nth && $index_in_group == 0)) {
         $classes[] = strtr($vars['options']['row']['first_class'], $replacements);
       }
     }
@@ -116,10 +120,10 @@ function template_preprocess_semanticviews_view_unformatted(&$vars) {
       // nth" option is specified, the LAST attribute is added to the class in
       // those intervals. This could be useful for grid designs where the last
       // unit in a row needs a zero width margin.
-      if (($last_every_nth && ($id + 1) % $last_every_nth == 0) ||
+      if (($last_every_nth && ($index_in_group + 1) % $last_every_nth == 0) ||
          // Otherwise when last every nth is not set, the LAST class is added
          // to the last row in the pager set.
-         (!$last_every_nth && ($id + 1) == count($vars['rows']))) {
+         (!$last_every_nth && ($index_in_group + 1) == count($vars['rows']))) {
         $classes[] = strtr($vars['options']['row']['last_class'], $replacements);
       }
     }
@@ -131,5 +135,7 @@ function template_preprocess_semanticviews_view_unformatted(&$vars) {
     if (!empty($classes)) {
       $vars['row_attributes'][$id]['class'] = implode(' ', $classes);
     }
+
+    $index_in_group++;
   }
 }

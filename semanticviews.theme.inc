@@ -1,6 +1,7 @@
 <?php
 /**
- * @file semanticviews.theme.inc
+ * @file
+ * semanticviews.theme.inc
  * TODO: Enter file description here.
  */
 
@@ -109,10 +110,10 @@ function template_preprocess_semanticviews_view_unformatted(&$vars) {
       // those intervals. This could be useful for grid designs where the first
       // unit in a row needs a zero width margin.
       if (($last_every_nth && $index_in_group % $last_every_nth == 0) ||
-         // Otherwise when last every nth is not set, the FIRST class is added
-         // to the first row in the pager set.
-         (!$last_every_nth && $index_in_group == 0)) {
-        $classes[] = strtr($vars['options']['row']['first_class'], $replacements);
+        // Otherwise when last every nth is not set, the FIRST class is added
+        // to the first row in the pager set.
+        (!$last_every_nth && $index_in_group == 0)) {
+          $classes[] = strtr($vars['options']['row']['first_class'], $replacements);
       }
     }
     if ($vars['options']['row']['last_class']) {
@@ -121,10 +122,10 @@ function template_preprocess_semanticviews_view_unformatted(&$vars) {
       // those intervals. This could be useful for grid designs where the last
       // unit in a row needs a zero width margin.
       if (($last_every_nth && ($index_in_group + 1) % $last_every_nth == 0) ||
-         // Otherwise when last every nth is not set, the LAST class is added
-         // to the last row in the pager set.
-         (!$last_every_nth && ($index_in_group + 1) == count($vars['rows']))) {
-        $classes[] = strtr($vars['options']['row']['last_class'], $replacements);
+        // Otherwise when last every nth is not set, the LAST class is added
+        // to the last row in the pager set.
+        (!$last_every_nth && ($index_in_group + 1) == count($vars['rows']))) {
+          $classes[] = strtr($vars['options']['row']['last_class'], $replacements);
       }
     }
 

@@ -1,7 +1,11 @@
 <?php
+/**
+ * @file
+ * TODO: Enter file description here.
+ */
 
 /**
- * Implementation of hook_views_plugins().
+ * Implements hook_views_plugins().
  */
 function semanticviews_views_plugins() {
   return array(

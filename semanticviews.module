@@ -1,11 +1,12 @@
 <?php
 /**
- * @file semanticviews.module
+ * @file
+ * semanticviews.module
  * TODO: Enter file description here.
  */
 
 /**
- *  Implementation of hook_views_api().
+ * Implements hook_views_api().
  */
 function semanticviews_views_api() {
   return array(

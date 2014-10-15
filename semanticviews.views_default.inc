@@ -1,7 +1,11 @@
 <?php
+/**
+ * @file
+ * TODO: Enter file description here.
+ */
 
 /**
- * Implementation of hook_views_default_views().
+ * Implements hook_views_default_views().
  */
 function semanticviews_views_default_views() {
   $view = new view;

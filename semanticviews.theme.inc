@@ -30,7 +30,20 @@ function template_preprocess_semanticviews_view_fields(&$vars) {
 
       $object->handler = &$view->field[$id];
 
-      $semantic_html = $vars['options']['semantic_html'][$id];
+      // If Semantic Views: Fields settings havn't been saved with new fields
+      // this is not set and then add empty array with no values.
+      if (isset($vars['options']['semantic_html'][$id])) {
+        $semantic_html = $vars['options']['semantic_html'][$id];
+      }
+      else {
+        // Default empty values.
+        $semantic_html = array(
+          'element_type' => '',
+          'class' => '',
+          'label_element_type' => '',
+          'label_class' => ''
+        );
+      }
 
       // Field content
       $object->element_type = check_plain($semantic_html['element_type']);
@@ -52,7 +65,6 @@ function template_preprocess_semanticviews_view_fields(&$vars) {
       $vars['fields'][$id] = $object;
     }
   }
-
 }
 
 /**

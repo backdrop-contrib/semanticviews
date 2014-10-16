@@ -31,6 +31,9 @@ class semanticviews_plugin_row_fields extends views_plugin_row {
     $form['semantic_html'] = array(
       '#tree' => TRUE,
     );
+    $form['semantic_html']['help'] = array(
+      '#markup' => t('These settings will override each Fields "Style Settings".')
+    );
     foreach ($this->display->handler->get_handlers('field') as $field => $handler) {
       if (!$handler->options['exclude']) {
         $default_value = (isset($this->options['semantic_html'][$field]) && is_array($this->options['semantic_html'][$field])) ? $this->options['semantic_html'][$field] : array(

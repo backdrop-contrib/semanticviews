@@ -1,7 +1,9 @@
 <?php
 /**
  * @file
- * TODO: Enter file description here.
+ * Semantic Views demo view.
+ *
+ * A simple demo view to show how Semantic Views Fields and Rows style works.
  */
 
 /**

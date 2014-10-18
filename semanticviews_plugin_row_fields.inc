@@ -13,6 +13,9 @@
  * @ingroup views_row_plugins
  */
 class semanticviews_plugin_row_fields extends views_plugin_row {
+  /**
+   * Set default options.
+   */
   function option_definition() {
     $options = parent::option_definition();
     $options['skip_blank'] = array('default' => FALSE);

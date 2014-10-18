@@ -1,8 +1,9 @@
 <?php
 /**
  * @file
- * semanticviews.module
- * TODO: Enter file description here.
+ * Semantic Views module file.
+ *
+ * Not so much here, only declare which Views API.
  */
 
 /**

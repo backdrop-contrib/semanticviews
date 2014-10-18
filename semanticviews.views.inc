@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * TODO: Enter file description here.
+ * Views Fields and Rows styles declaration.
  */
 
 /**

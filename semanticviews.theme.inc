@@ -1,8 +1,10 @@
 <?php
 /**
  * @file
- * semanticviews.theme.inc
- * TODO: Enter file description here.
+ * Theme for Semantic Views.
+ *
+ * Holds template preprocess for Views Field and Views Rows.
+ * @see semanticviews_views_plugins()
  */
 
 /**
@@ -120,7 +122,7 @@ function template_preprocess_semanticviews_view_unformatted(&$vars) {
         // to the first row in the pager set.
         (!$last_every_nth && $index_in_group == 0)) {
         if ($class = $view->style_plugin->tokenize_class($id, $vars['options']['row']['first_class'])) {
-           $classes[] = $class;
+          $classes[] = $class;
         }
       }
     }

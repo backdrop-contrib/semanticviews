@@ -228,4 +228,20 @@ class semanticviews_plugin_style_default extends views_plugin_style {
     // TODO: validate that the elements and classes are valid HTML. This is not
     // a substitute for output filtering.
   }
+
+  /**
+   * Return the token replaced class for the specified row.
+   */
+  function tokenize_class($row_index, $class) {
+    if ($this->uses_fields() && $this->view->field) {
+      $class = strip_tags($this->tokenize_value($class, $row_index));
+    }
+
+    $classes = explode(' ', $class);
+    foreach ($classes as &$class) {
+      $class = drupal_clean_css_identifier($class);
+    }
+
+    return implode(' ', $classes);
+  }
 }

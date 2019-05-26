@@ -29,13 +29,13 @@
 <?php foreach ($fields as $id => $field): ?>
 
   <?php if (!empty($field->element_type)): ?>
-    <<?php print $field->element_type; ?><?php print drupal_attributes($field->attributes); ?>>
+    <<?php print $field->element_type; ?><?php print backdrop_attributes($field->attributes); ?>>
   <?php endif; ?>
 
     <?php if (!empty($field->label)): ?>
 
       <?php if (!empty($field->label_element_type)): ?>
-        <<?php print $field->label_element_type; ?><?php print drupal_attributes($field->label_attributes); ?>>
+        <<?php print $field->label_element_type; ?><?php print backdrop_attributes($field->label_attributes); ?>>
       <?php endif; ?>
 
           <?php print $field->label; ?><?php if ($field->handler->options['element_label_colon']): ?>:<?php endif; ?>

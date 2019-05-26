@@ -243,7 +243,7 @@ class semanticviews_plugin_style_default extends views_plugin_style {
 
     $classes = explode(' ', $class);
     foreach ($classes as &$class) {
-      $class = drupal_clean_css_identifier($class);
+      $class = backdrop_clean_css_identifier($class);
     }
 
     return implode(' ', $classes);

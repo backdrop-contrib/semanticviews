@@ -1,8 +1,6 @@
 name = Semantic Views
-description = Views 3 plugins for UI management of output markup
-core = 7.x
+description = Views plugins for UI management of output markup
+backdrop = 1.x
+type = module
 dependencies[] = views
 package = Views
-
-files[] = semanticviews_plugin_row_fields.inc
-files[] = semanticviews_plugin_style_default.inc

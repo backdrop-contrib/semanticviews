@@ -9,6 +9,7 @@
  */
 function semanticviews_views_plugins() {
   return array(
+    'module' => 'semanticviews',
     'style' => array(
       'semanticviews_default' => array(
         'title' => t('Semantic Views'),
@@ -16,7 +17,7 @@ function semanticviews_views_plugins() {
         'handler' => 'semanticviews_plugin_style_default',
         'theme' => 'semanticviews_view_unformatted',
         'theme file' => 'semanticviews.theme.inc',
-        'theme path' => drupal_get_path('module', 'semanticviews'),
+        'theme path' => backdrop_get_path('module', 'semanticviews') . '/templates',
         'uses row plugin' => TRUE,
         'uses options' => TRUE,
         'uses grouping' => TRUE,
@@ -31,7 +32,7 @@ function semanticviews_views_plugins() {
         'handler' => 'semanticviews_plugin_row_fields',
         'theme' => 'semanticviews_view_fields',
         'theme file' => 'semanticviews.theme.inc',
-        'theme path' => drupal_get_path('module', 'semanticviews'),
+        'theme path' => backdrop_get_path('module', 'semanticviews') . '/templates',
         'uses fields' => TRUE,
         'uses options' => TRUE,
         'type' => 'normal',

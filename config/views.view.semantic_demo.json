@@ -1,0 +1,396 @@
+{
+  "_config_name": "views.view.semantic_demo",
+  "name": "semantic_demo",
+  "description": "",
+  "tag": "",
+  "disabled": false,
+  "base_table": "node",
+  "module": "semanticviews",
+  "storage": 4,
+  "human_name": "Semantic Views Demo",
+  "core": "1.0",
+  "display": {
+      "default": {
+          "display_title": "Defaults",
+          "display_plugin": "default",
+          "display_options": {
+              "query": {
+                  "type": "views_query",
+                  "options": []
+              },
+              "title": "Semantic Views demo",
+              "access": {
+                  "type": "none"
+              },
+              "cache": {
+                  "type": "none"
+              },
+              "exposed_form": {
+                  "type": "basic"
+              },
+              "pager": {
+                  "type": "full"
+              },
+              "style_plugin": "default",
+              "row_plugin": "fields",
+              "fields": {
+                  "title": {
+                      "id": "title",
+                      "table": "node",
+                      "field": "title",
+                      "label": "",
+                      "alter": {
+                          "alter_text": 0,
+                          "make_link": 0,
+                          "trim": 0,
+                          "word_boundary": 1,
+                          "ellipsis": 1,
+                          "strip_tags": 0,
+                          "html": 0
+                      },
+                      "link_to_node": 1
+                  },
+                  "type": {
+                      "id": "type",
+                      "table": "node",
+                      "field": "type",
+                      "label": "",
+                      "alter": {
+                          "alter_text": 0,
+                          "make_link": 0,
+                          "trim": 0,
+                          "word_boundary": 1,
+                          "ellipsis": 1,
+                          "strip_tags": 0,
+                          "html": 0
+                      },
+                      "link_to_node": 0
+                  },
+                  "entity_id": {
+                      "id": "entity_id",
+                      "table": "field_data_body",
+                      "field": "entity_id",
+                      "label": "",
+                      "alter": {
+                          "alter_text": 0,
+                          "make_link": 0,
+                          "absolute": 0,
+                          "trim": 0,
+                          "word_boundary": 1,
+                          "ellipsis": 1,
+                          "strip_tags": 0,
+                          "html": 0
+                      },
+                      "hide_empty": 0,
+                      "empty_zero": 0,
+                      "type": "text_summary_or_trimmed",
+                      "settings": {
+                          "trim_length": "600"
+                      }
+                  },
+                  "delete_node": {
+                      "id": "delete_node",
+                      "table": "node",
+                      "field": "delete_node",
+                      "alter": {
+                          "alter_text": 0,
+                          "make_link": 0,
+                          "trim": 0,
+                          "word_boundary": 1,
+                          "ellipsis": 1,
+                          "strip_tags": 0,
+                          "html": 0
+                      }
+                  },
+                  "edit_node": {
+                      "id": "edit_node",
+                      "table": "node",
+                      "field": "edit_node",
+                      "alter": {
+                          "alter_text": 0,
+                          "make_link": 0,
+                          "trim": 0,
+                          "word_boundary": 1,
+                          "ellipsis": 1,
+                          "strip_tags": 0,
+                          "html": 0
+                      }
+                  }
+              },
+              "filters": {
+                  "status": {
+                      "id": "status",
+                      "table": "node",
+                      "field": "status",
+                      "value": "1",
+                      "expose": {
+                          "operator": false
+                      }
+                  }
+              }
+          }
+      },
+      "page_1": {
+          "display_title": "Unformatted (default)",
+          "display_plugin": "page",
+          "display_options": {
+              "query": {
+                  "type": "views_query",
+                  "options": []
+              },
+              "path": "semantic-views-demo/unformatted",
+              "menu": {
+                  "type": "default tab",
+                  "title": "Unformatted",
+                  "weight": "0"
+              },
+              "tab_options": {
+                  "type": "normal",
+                  "title": "Semantic Views demo",
+                  "weight": "0"
+              }
+          }
+      },
+      "page_2": {
+          "display_title": "Grid (default)",
+          "display_plugin": "page",
+          "display_options": {
+              "query": {
+                  "type": "views_query",
+                  "options": []
+              },
+              "defaults": {
+                  "style_plugin": false,
+                  "style_options": false,
+                  "row_plugin": false,
+                  "row_options": false
+              },
+              "style_plugin": "grid",
+              "row_plugin": "fields",
+              "path": "semantic-views-demo/grid",
+              "menu": {
+                  "type": "tab",
+                  "title": "Grid",
+                  "weight": "1"
+              }
+          }
+      },
+      "page_3": {
+          "display_title": "List (default)",
+          "display_plugin": "page",
+          "display_options": {
+              "query": {
+                  "type": "views_query",
+                  "options": []
+              },
+              "defaults": {
+                  "style_plugin": false,
+                  "style_options": false,
+                  "row_plugin": false,
+                  "row_options": false
+              },
+              "style_plugin": "list",
+              "row_plugin": "fields",
+              "path": "semantic-views-demo/list",
+              "menu": {
+                  "type": "tab",
+                  "title": "List",
+                  "weight": "2"
+              }
+          }
+      },
+      "page_4": {
+          "display_title": "Unformatted (semantic)",
+          "display_plugin": "page",
+          "display_options": {
+              "query": {
+                  "type": "views_query",
+                  "options": []
+              },
+              "defaults": {
+                  "style_plugin": false,
+                  "style_options": false,
+                  "row_plugin": false,
+                  "row_options": false
+              },
+              "style_plugin": "semanticviews_default",
+              "row_plugin": "semanticviews_fields",
+              "row_options": {
+                  "skip_blank": 1,
+                  "semantic_html": {
+                      "title": {
+                          "element_type": "h2",
+                          "class": "title"
+                      },
+                      "type": {
+                          "element_type": "div",
+                          "class": "node-type"
+                      },
+                      "entity_id": {
+                          "element_type": "div",
+                          "class": "teaser"
+                      },
+                      "delete_node": {
+                          "element_type": "div",
+                          "class": "delete",
+                          "label_element_type": "label",
+                          "label_class": ""
+                      },
+                      "edit_node": {
+                          "element_type": "div",
+                          "class": "edit",
+                          "label_element_type": "label",
+                          "label_class": ""
+                      }
+                  }
+              },
+              "path": "semantic-views-demo/unformatted-semantic",
+              "menu": {
+                  "type": "tab",
+                  "title": "Unformatted (semantic)",
+                  "weight": "0"
+              },
+              "tab_options": {
+                  "weight": "0"
+              }
+          }
+      },
+      "page_5": {
+          "display_title": "Grid (semantic)",
+          "display_plugin": "page",
+          "display_options": {
+              "query": {
+                  "type": "views_query",
+                  "options": []
+              },
+              "defaults": {
+                  "style_plugin": false,
+                  "style_options": false,
+                  "row_plugin": false,
+                  "row_options": false,
+                  "header": false
+              },
+              "style_plugin": "semanticviews_default",
+              "style_options": {
+                  "row": {
+                      "class": "grid-unit",
+                      "last_every_nth": "4"
+                  }
+              },
+              "row_plugin": "semanticviews_fields",
+              "row_options": {
+                  "skip_blank": 1,
+                  "semantic_html": {
+                      "title": {
+                          "element_type": "h2",
+                          "class": "title"
+                      },
+                      "type": {
+                          "element_type": "div",
+                          "class": "node-type"
+                      },
+                      "entity_id": {
+                          "element_type": "div",
+                          "class": "teaser"
+                      },
+                      "delete_node": {
+                          "element_type": "div",
+                          "class": "delete",
+                          "label_element_type": "label",
+                          "label_class": ""
+                      },
+                      "edit_node": {
+                          "element_type": "div",
+                          "class": "edit",
+                          "label_element_type": "label",
+                          "label_class": ""
+                      }
+                  }
+              },
+              "header": {
+                  "text": {
+                      "id": "area",
+                      "table": "views",
+                      "field": "area",
+                      "empty": false,
+                      "content": "<style>\r\n    .grid-unit {\r\n      width: 20%;\r\n      margin-right: 5%;\r\n      float: left;\r\n    }\r\n    .first {\r\n      clear: left;\r\n    }\r\n    .last {\r\n      margin-right: 0;\r\n    }\r\n    </style>",
+                      "format": "2"
+                  }
+              },
+              "path": "semantic-views-demo/grid-semantic",
+              "menu": {
+                  "type": "tab",
+                  "title": "Grid (semantic)",
+                  "weight": "1"
+              },
+              "tab_options": {
+                  "weight": "0"
+              }
+          }
+      },
+      "page_6": {
+          "display_title": "List (semantic)",
+          "display_plugin": "page",
+          "display_options": {
+              "query": {
+                  "type": "views_query",
+                  "options": []
+              },
+              "defaults": {
+                  "style_plugin": false,
+                  "style_options": false,
+                  "row_plugin": false,
+                  "row_options": false
+              },
+              "style_plugin": "semanticviews_default",
+              "style_options": {
+                  "list": {
+                      "element_type": "ul"
+                  },
+                  "row": {
+                      "element_type": "li"
+                  }
+              },
+              "row_plugin": "semanticviews_fields",
+              "row_options": {
+                  "skip_blank": 1,
+                  "semantic_html": {
+                      "title": {
+                          "element_type": "h2",
+                          "class": "title"
+                      },
+                      "type": {
+                          "element_type": "div",
+                          "class": "node-type"
+                      },
+                      "entity_id": {
+                          "element_type": "div",
+                          "class": "teaser"
+                      },
+                      "delete_node": {
+                          "element_type": "div",
+                          "class": "delete",
+                          "label_element_type": "label",
+                          "label_class": ""
+                      },
+                      "edit_node": {
+                          "element_type": "div",
+                          "class": "edit",
+                          "label_element_type": "label",
+                          "label_class": ""
+                      }
+                  }
+              },
+              "path": "semantic-views-demo/list-semantic",
+              "menu": {
+                  "type": "tab",
+                  "title": "List (semantic)",
+                  "weight": "2"
+              },
+              "tab_options": {
+                  "weight": "0"
+              }
+          }
+      }
+  }
+}

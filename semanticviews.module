@@ -12,5 +12,16 @@
 function semanticviews_views_api() {
   return array(
     'api' => 3.0,
+    'path' => backdrop_get_path('module', 'semanticviews') . '/views',
+  );
+}
+
+/**
+ * Implements hook_autoload_info().
+ */
+function semanticviews_autoload_info() {
+  return array(
+    'semanticviews_plugin_row_fields' => 'views/semanticviews_plugin_row_fields.inc',
+    'semanticviews_plugin_style_default' => 'views/semanticviews_plugin_style_default.inc',
   );
 }
